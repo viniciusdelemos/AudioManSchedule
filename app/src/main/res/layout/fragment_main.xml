@@ -1,0 +1,323 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.vinles.audiomanschedule.AudioConfs" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Calendar-->
+        <TextView
+            android:id="@+id/calendarLabel"
+            android:text="Calendar: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/calendar"
+            android:text="@{data.calendar}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/calendarLabel"
+            />
+
+        <!--RingerMode-->
+        <TextView
+            android:id="@+id/ringerModeLabel"
+            android:text="RingerMode: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calendarLabel"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/ringerMode"
+            android:text="@{data.ringerMode}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ringerModeLabel"
+            android:layout_below="@id/calendar"
+            />
+
+        <!--RingerModeDesc-->
+        <TextView
+            android:id="@+id/ringerModeDescLabel"
+            android:text="RingerModeDesc: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ringerModeLabel"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/ringerModeDesc"
+            android:text="@{data.ringerModeDesc}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ringerModeDescLabel"
+            android:layout_below="@id/ringerMode"/>
+
+        <!--Alarm-->
+        <TextView
+            android:id="@+id/alarmLabel"
+            android:text="Alarm: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ringerModeDescLabel"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/alarm"
+            android:text="@{data.alarm}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/alarmLabel"
+            android:layout_below="@id/ringerModeDesc"/>
+
+        <!--AlarmMax-->
+        <TextView
+            android:id="@+id/alarmMaxLabel"
+            android:text=" Max: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ringerModeDescLabel"
+            android:layout_toRightOf="@id/alarm"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/alarmMax"
+            android:text="@{data.alarm_max}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/alarmMaxLabel"
+            android:layout_below="@id/ringerModeDescLabel"/>
+
+        <!--Dtmf-->
+        <TextView
+            android:id="@+id/dtmfLabel"
+            android:text="Dtmf: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/alarmLabel"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/dtmf"
+            android:text="@{data.dtmf}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/dtmfLabel"
+            android:layout_below="@id/alarmLabel"/>
+
+        <!--DtmfMax-->
+        <TextView
+            android:id="@+id/dtmfMaxLabel"
+            android:text=" Max: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/alarmLabel"
+            android:layout_toRightOf="@id/dtmf"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/dtmfMax"
+            android:text="@{data.dtmf_max}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/dtmfMaxLabel"
+            android:layout_below="@id/alarmLabel"/>
+
+        <!--Music-->
+        <TextView
+            android:id="@+id/musicLabel"
+            android:text="Music: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dtmfLabel"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/music"
+            android:text="@{data.music}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/musicLabel"
+            android:layout_below="@id/dtmfLabel"
+            />
+
+        <!--MusicMax-->
+        <TextView
+            android:id="@+id/musicMaxLabel"
+            android:text=" Max: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dtmfLabel"
+            android:layout_toRightOf="@id/music"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/musicMax"
+            android:text="@{data.music_max}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/musicMaxLabel"
+            android:layout_below="@id/dtmfLabel"
+            />
+
+
+        <!--Notification-->
+        <TextView
+            android:id="@+id/notificationLabel"
+            android:text="Notification: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/musicLabel"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/notification"
+            android:text="@{data.notification}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/notificationLabel"
+            android:layout_below="@id/musicLabel"
+            />
+
+        <!--NotificationMax-->
+        <TextView
+            android:id="@+id/notificationMaxLabel"
+            android:text=" Max: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/musicLabel"
+            android:layout_toRightOf="@id/notification"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/notificationMax"
+            android:text="@{data.notification_max}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/notificationMaxLabel"
+            android:layout_below="@id/musicLabel"
+            />
+
+        <!--Ring-->
+        <TextView
+            android:id="@+id/ringLabel"
+            android:text="Ring: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/notificationLabel"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/ring"
+            android:text="@{data.ring}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ringLabel"
+            android:layout_below="@id/notificationLabel"
+            />
+
+        <!--RingMax-->
+        <TextView
+            android:id="@+id/ringMaxLabel"
+            android:text=" Max: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/notificationLabel"
+            android:layout_toRightOf="@id/ring"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/ringMax"
+            android:text="@{data.ring_max}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ringMaxLabel"
+            android:layout_below="@id/notificationLabel"
+            />
+
+        <!--System-->
+        <TextView
+            android:id="@+id/systemLabel"
+            android:text="System: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ringLabel"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/system"
+            android:text="@{data.system}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/systemLabel"
+            android:layout_below="@id/ringLabel"
+            />
+
+        <!--SystemMax-->
+        <TextView
+            android:id="@+id/systemMaxLabel"
+            android:text=" Max: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ringLabel"
+            android:layout_toRightOf="@id/system"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/systemMax"
+            android:text="@{data.system_max}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/systemMaxLabel"
+            android:layout_below="@id/ringLabel"
+            />
+
+        <!--VoiceCall-->
+        <TextView
+            android:id="@+id/voicecallLabel"
+            android:text="VoiceCall: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/systemLabel"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/voicecall"
+            android:text="@{data.voice_call}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/voicecallLabel"
+            android:layout_below="@id/systemLabel"
+            />
+
+        <!--VoiceCallMax-->
+        <TextView
+            android:id="@+id/voicecallMaxLabel"
+            android:text=" Max: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/systemLabel"
+            android:layout_toRightOf="@id/voicecall"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/voicecallMax"
+            android:text="@{data.voice_call_max}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/voicecallMaxLabel"
+            android:layout_below="@id/systemLabel"
+            />
+
+    </RelativeLayout>
+</layout>
+
